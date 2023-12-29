@@ -9,6 +9,58 @@
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <div class="sidenav">
+        <div class="sidenav__content">
+          <img src="./assets/images/icon-close.svg" alt="" class="close-icon">
+          <a href="#">Collections</a>
+          <a href="#">Men</a>
+          <a href="#">Women</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="header__menu">
+          <img src="./assets/images/icon-menu.svg" alt="menu-icon" class="hambuger">
+        </div>
+        <img src="./assets/images/logo.svg" alt="" class="header__logo">
+        <img src="./assets/images/icon-cart.svg" alt="cart" class="shopping-cart">
+        <img src="./assets/images/image-avatar.png" alt="avatar" class="avatar">
+      </div>
+    </header>
   
+    <main class="main">
+      <section class="slide-deck">
+        <img src="./assets/images/image-product-1.jpg" alt="" class="slide-deck__img">
+        <div class="slide-deck__selector">
+          <div class="previous"><img src="./assets/images/icon-previous.svg" alt=""></div>
+          <div class="next"><img src="./assets/images/icon-next.svg" alt=""></div>
+        </div>
+      </section>
+      
+      <section class="main__content">
+        <h2 class="main__content--header">Sneaker Company</h2>
+        <h3 class="main__content--secondary">Fall Limited Edition Sneakers</h3>
+        <p class="main__content--text">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="cost">
+          <div class="price">$125.00</div>
+          <div class="discount">50%</div>
+          <div class="retail-price">$250.00</div>
+        </div>
+        <div class="quantity">
+          <span class="minus"><img src="./assets/images/icon-minus.svg" alt=""></span>
+          <span class="quantity__text">0</span>
+          <span class="plus"><img src="./assets/images/icon-plus.svg" alt=""></span>
+        </div>
+        <button class="cart-btn">
+          <img src="./assets/images/icon-cart-btn.svg" alt="" class="cart-btn__img">
+          Add to cart
+        </button>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
