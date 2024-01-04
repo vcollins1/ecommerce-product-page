@@ -17,7 +17,6 @@ body {
   width: 375px;
   height: 900px;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .header {
@@ -28,30 +27,19 @@ body {
   align-items: center;
 }
 
-.sidenav {
+.nav {
   height: 900px;
-  width: 100%;
-  background-color: rgba(0,0,0,0.75);
+  width: 250px;
+  background-color: #FFF;
   position: absolute;
+  padding-top: 25px;
   z-index: 1;
   top: 0;
   left: 0;
   display: none;
 }
 
-.sidenav__content {
-  width: 250px;
-  height: 100%;
-  background: #FFF;
-  padding-top: 25px;
-}
-
-.close-icon {
-  margin-left: 25px;
-  margin-bottom: 54px;
-}
-
-.sidenav__content a {
+.nav a {
   text-decoration: none;
   font-size: 18px;
   display: block;
@@ -60,15 +48,26 @@ body {
   margin-left: 25px;
 }
 
+.nav::before {
+  content: "";
+  width: calc(375px - 250px);
+  height: 900px;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  left: 250px;
+}
+
+.close-icon {
+  margin-left: 25px;
+  margin-bottom: 54px;
+  cursor: pointer;
+}
+
 
 .header__content {
   width: 327px;
   height: 24px;
-  display: flex;
-  align-items: center;
-}
-
-.header__content > * {
   display: flex;
   align-items: center;
 }

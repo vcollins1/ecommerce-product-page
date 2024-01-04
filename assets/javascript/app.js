@@ -5,11 +5,11 @@ const cartCount = document.querySelector(".shopping-cart__count");
 let sneakerImg = 1;
 
 document.querySelector(".hambuger").addEventListener("click", e => {
-    document.querySelector(".sidenav").style.display = "block";
+    document.querySelector(".nav").style.display = "block";
 })
 
 document.querySelector(".close-icon").addEventListener("click", e => {
-    document.querySelector(".sidenav").style.display = "none";
+    document.querySelector(".nav").style.display = "none";
 })
 
 document.querySelector(".next").addEventListener("click", e => {
