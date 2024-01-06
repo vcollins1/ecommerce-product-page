@@ -2,6 +2,7 @@ const qCount = document.querySelector(".quantity__text");
 const incDec = document.querySelectorAll(".inc-dec");
 const addCart = document.querySelector(".cart-btn");
 const cartCount = document.querySelector(".shopping-cart__count");
+const thumbnails = document.querySelectorAll(".thumbnail");
 let sneakerImg = 1;
 
 document.querySelector(".hambuger").addEventListener("click", e => {
@@ -20,6 +21,15 @@ document.querySelector(".next").addEventListener("click", e => {
 document.querySelector(".previous").addEventListener("click", e => {
     sneakerImg = (sneakerImg - 1) === 0 ? 4 : sneakerImg - 1;
     document.querySelector(".slide-deck__img").src = `./assets/images/image-product-${sneakerImg}.jpg`
+})
+
+thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener("click", e => {
+        document.querySelector(".slide-deck__img").src = e.target.src.replace("-thumbnail", '');
+
+        document.querySelector(".active-thumbnail").classList.remove("active-thumbnail");
+        e.target.parentElement.classList.add("active-thumbnail");
+    })
 })
 
 document.querySelector(".shopping-cart").addEventListener("click", e => {
