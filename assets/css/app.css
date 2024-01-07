@@ -338,11 +338,19 @@ body {
   background: #FFAB6A;
 }
 
+.slide-deck__thumbnails {
+  display: none;
+}
+
+.viewer-container {
+  display: none;
+}
+
 @media screen and (min-width: 1110px) {
   .container {
     width: 1110px;
     height: 740px;
-    margin-top: 28px;
+    padding-top: 28px;
   }
 
   .header {
@@ -405,7 +413,7 @@ body {
 
   .cart {
     top: -110px;
-    right: -5px;
+    right: -75px;
     box-shadow: 0 0 20px #ccc;
   }
 
@@ -413,6 +421,7 @@ body {
     width: 445px;
     height: 445px;
     border-radius: 15px;
+    cursor: pointer;
   }
 
   .slide-deck__selector {
@@ -499,5 +508,79 @@ body {
     opacity: 0.5;
     transform: scale(1.03);
   }
-  
+
+  .viewer-container {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .viewer__close {
+    color: #FFF;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+
+  .viewer__img {
+    height: 550px;
+    width: 550px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+
+  .viewer__thumbnails {
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+  }
+
+  .viewer__thumbnail img {
+    width: 88px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .viewer__img-selector {
+    position: absolute;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    top: 350px;
+  }
+
+  .viewer__img-selector--previous,
+  .viewer__img-selector--next {
+    width: 56px;
+    height: 56px;
+    background: #FFF;
+    text-align: center;
+    line-height: 48px;
+    font-size: 42px;
+    border-radius: 50%;
+  }
+
+  .viewer__img-selector--previous {
+    margin-left: -28px;
+    cursor: pointer;
+  }
+
+  .viewer__img-selector--next {
+    margin-right: -28px;
+    cursor: pointer;
+  }
+
+  .viewer__img-selector--next:hover,
+  .viewer__img-selector--previous:hover,
+  .viewer__close:hover {
+    color: #FF7E1B;
+  }
 }
